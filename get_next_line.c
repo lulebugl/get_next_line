@@ -6,34 +6,14 @@
 /*   By: lulebugl <lulebugl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 01:02:01 by lulebugl          #+#    #+#             */
-/*   Updated: 2019/10/17 01:25:05 by lulebugl         ###   ########.fr       */
+/*   Updated: 2019/10/18 14:45:52 by lulebugl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	char		*newstring;
-	size_t		i;
-
-	i = 0;
-	newstring = (char *)malloc(len + 1);
-	if (newstring == NULL || s == NULL)
-		return (NULL);
-	while (i < len)
-	{
-		newstring[i] = s[start];
-		i++;
-		start++;
-	}
-	newstring[i] = '\0';
-	return (newstring);
-}
-
 int		ft_line(char **line, char *buf, int i)
 {
-	//char		*tmp;
 	int			st;
 
 	i = 0;
@@ -45,7 +25,6 @@ int		ft_line(char **line, char *buf, int i)
 		st = 1;
 		buf[i] = '\0';
 	}
-	//tmp = ft_substr(buf, 0, i);
 	if (!(*line = ft_strjoin(*line, buf)))
 		return (-1);
 	if (st == 1)
@@ -81,18 +60,3 @@ int		get_next_line(int fd, char **line)
 	}
 	return (0);
 }
-
-int		main()
-{
-	int fd;
-	char *ptr;
-	ptr = malloc(10000000);
-	fd = open("get_next_line_utils.c", O_RDONLY );
-	while (1)
-	{
-		if ((get_next_line(fd, &ptr)) <= 0)
-			break;
-		printf("%s\n", ptr);
-		//free (ptr);
-	}
-}      

@@ -6,7 +6,7 @@
 /*   By: lulebugl <lulebugl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 01:01:58 by lulebugl          #+#    #+#             */
-/*   Updated: 2019/10/17 01:24:02 by lulebugl         ###   ########.fr       */
+/*   Updated: 2019/10/18 14:40:32 by lulebugl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		j++;
 	}
 	str[i] = '\0';
-	//free((char*)s1);
+	free((char*)s1);
 	return (str);
 }
