@@ -6,7 +6,7 @@
 /*   By: lulebugl <lulebugl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 14:45:18 by lulebugl          #+#    #+#             */
-/*   Updated: 2019/10/18 14:46:08 by lulebugl         ###   ########.fr       */
+/*   Updated: 2019/10/18 17:45:38 by lulebugl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,9 @@ int		main(int argc, char **argv)
 			{
 				i++;
 				printf("MAIN:%d, line>%s\n", ret, line);
+				free(line);
 			}
+			free(line);
 			close(fd);
        	}
 	}

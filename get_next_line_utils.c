@@ -6,7 +6,7 @@
 /*   By: lulebugl <lulebugl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 01:01:58 by lulebugl          #+#    #+#             */
-/*   Updated: 2019/10/18 14:40:32 by lulebugl         ###   ########.fr       */
+/*   Updated: 2019/10/18 17:12:49 by lulebugl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*str;
 
 	i = 0;
-	if (!(str = malloc((sizeof(char*)) * (ft_strlen(s1) + ft_strlen(s2) + 1))))
+	if (!(str = (char*)malloc((sizeof(char)) * (ft_strlen(s1) + ft_strlen(s2) + 1))))
 		return (NULL);
 	while (s1[i] != 0)
 	{
