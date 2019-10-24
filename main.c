@@ -6,7 +6,7 @@
 /*   By: lulebugl <lulebugl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 14:45:18 by lulebugl          #+#    #+#             */
-/*   Updated: 2019/10/18 17:45:38 by lulebugl         ###   ########.fr       */
+/*   Updated: 2019/10/24 08:08:13 by lulebugl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,28 +28,40 @@
 //}
 //
 
-int		main(int argc, char **argv)
-{
-	int fd;
-	char *line;
-	int ret; /* printing gnl return value */
-	int i;
+//int		main(int argc, char **argv)
+//{
+//	int fd;
+//	char *line;
+//	int ret;
+//	int i;
+//
+//	if (argc >= 2)
+//	{
+//		if (access(argv[1], F_OK) == 0)
+//		{
+//			i = 0;
+//			fd = open(argv[1], O_RDONLY);
+//			while((ret = get_next_line(fd, &line)) == 1)
+//			{
+//				i++;
+//				printf("MAIN:%d, line>%s\n", ret, line);
+//				free(line);
+//			}
+//			free(line);
+//			close(fd);
+//       	}
+//	}	
+//	return (1);
+//}
 
-	if (argc >= 2)
-	{
-		if (access(argv[1], F_OK) == 0)
-		{
-			i = 0;
-			fd = open(argv[1], O_RDONLY);
-			while((ret = get_next_line(fd, &line)) == 1)
-			{
-				i++;
-				printf("MAIN:%d, line>%s\n", ret, line);
-				free(line);
-			}
-			free(line);
-			close(fd);
-       	}
-	}
-	return (1);
-}
+//int main(int ac, char **av)
+//{
+//	int fd;
+//	char *line;
+//
+//	ac = 0;
+//	fd = open(av[1], O_RDONLY);
+//	get_next_line(fd, &line);
+//	free(line);
+//	return (0);
+//}
