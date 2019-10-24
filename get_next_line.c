@@ -6,11 +6,15 @@
 /*   By: lulebugl <lulebugl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 01:02:01 by lulebugl          #+#    #+#             */
-/*   Updated: 2019/10/24 07:46:59 by lulebugl         ###   ########.fr       */
+/*   Updated: 2019/10/24 13:40:41 by lulebugl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+
+/*
+**	verifier '\0' à la fin du fichier;
+*/
 
 int		ft_line(char **line, char *buf, int i)
 {
